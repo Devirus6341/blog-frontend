@@ -36,16 +36,12 @@ function EditPost() {
 
 const handleSubmit = async (e) => { 
     e.preventDefault();
-   
-  try {
-    await axios.patch(
-      `https://blog-backend-r0rj.onrender.com/edit`,
-      { id, title, content }
-    );
-    navigate('/user/posts');
-  } catch (error) {
-    console.error(error);
-  }
+    try {
+    await axios.patch(`https://blog-backend-r0rj.onrender.com/edit`, {id, title, content} )
+      navigate('/user/posts')
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 return (
