@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { UserContext } from "../UserContext";
-import '../../styles/home.css'
+import '../styles/home.css'
 
  function Home({logout}) {
   const [user] = useContext(UserContext)
