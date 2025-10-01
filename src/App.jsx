@@ -10,6 +10,7 @@ import { UserContext } from './UserContext'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+axios.defaults.withCredentials = true;
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
