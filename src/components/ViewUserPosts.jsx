@@ -12,7 +12,7 @@ const [posts, setPosts] = useState ([]);
 useEffect(() => {
     const blogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/user/posts', {
+        const response = await axios.get('https://blog-backend-r0rj.onrender.com/user/posts', {
               headers: {
             Authorization: `Bearer ${user?.accessToken}`
           }
@@ -32,7 +32,7 @@ useEffect(() => {
       if (!confirmDelete) return;
 
       try {
-    const response = await axios.delete(`http://localhost:5000/delete/${id}`, {  headers: {
+    const response = await axios.delete(`https://blog-backend-r0rj.onrender.com/delete/${id}`, {  headers: {
         Authorization: `Bearer ${user?.accessToken}`,
       }, withCredentials:true});
     alert('Post Deleted Successfully')

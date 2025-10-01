@@ -14,7 +14,7 @@ const handleSubmit = async () => {
     try {
          navigate('/')
          
-             await axios.post("http://localhost:5000/create", {title, content}, {
+             await axios.post("https://blog-backend-r0rj.onrender.com/create", {title, content}, {
                 headers: {
                     Authorization: `Bearer ${user?.accessToken}` 
                 },

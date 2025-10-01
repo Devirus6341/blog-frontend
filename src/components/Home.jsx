@@ -12,7 +12,7 @@ useEffect(() => {
     const blogs = async () => {
       
       try {
-             const response = await axios.get('http://localhost:5000/posts', {withCredentials: true})
+             const response = await axios.get('https://blog-backend-r0rj.onrender.com/posts', {withCredentials: true})
               const data = response.data;
            setPosts(data.posts);
       } catch (error) {
@@ -27,7 +27,7 @@ useEffect(() => {
  }
 
   const handleViewPost = async(title) => {
-    await axios.post('http://localhost:5000/post', {title})
+    await axios.post('https://blog-backend-r0rj.onrender.com/post', {title})
   }
 
 

@@ -21,7 +21,7 @@ const navigate = useNavigate();
 
     const handleLogin = async(event) =>{
         event.preventDefault();
-     const response =   await axios.post("http://localhost:5000/login", {email, password}, {withCredentials:true});  
+     const response =   await axios.post("https://blog-backend-r0rj.onrender.com/login", {email, password}, {withCredentials:true});  
         const data = response.data;
         if (data.accessToken){
             setUser({accessToken: data.accessToken})  

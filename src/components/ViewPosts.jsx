@@ -15,7 +15,7 @@ if (!user?.accessToken) {
 useEffect(() => {
     const blogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/post',);
+        const response = await axios.get('https://blog-backend-r0rj.onrender.com/post',);
         const data = response.data;
         setPost(data);
       } catch (error) {

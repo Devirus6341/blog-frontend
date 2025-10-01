@@ -18,7 +18,7 @@ function App() {
     const checkRefreshToken = async () => {
       try {
         const result = await axios.post(
-          "http://localhost:5000/refresh_token",
+          "https://blog-backend-r0rj.onrender.com/refresh_token",
           {},
           { withCredentials: true }
         );
@@ -42,7 +42,7 @@ function App() {
 
 const handleLogout = async () => {
   try {
-    await axios.post("http://localhost:5000/logout", {}, { withCredentials: true });
+    await axios.post("https://blog-backend-r0rj.onrender.com/logout", {}, { withCredentials: true });
    
   } catch (err) {
     console.log("Logout failed:", err);

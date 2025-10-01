@@ -10,7 +10,7 @@ const navigate = useNavigate();
 
     const handleSignUp = async(event) =>{
         event.preventDefault();
-     const response =   await axios.post("http://localhost:5000/signup", {email, password});  
+     const response =   await axios.post("https://blog-backend-r0rj.onrender.com/signup", {email, password});  
         const data = response.data;
         console.log(data)
         if (data.authenticated) {

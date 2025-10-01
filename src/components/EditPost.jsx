@@ -16,7 +16,7 @@ function EditPost() {
     useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/edit/post/${id}`, {
+        const response = await axios.get(`https://blog-backend-r0rj.onrender.com/edit/post/${id}`, {
           headers: {
             Authorization: `Bearer ${user?.accessToken}`
           }
@@ -36,7 +36,7 @@ function EditPost() {
 const handleSubmit = async () => { 
     try {
     navigate('/user/posts')
-    await axios.patch(`http://localhost:5000/edit`, {id, title, content} )
+    await axios.patch(`https://blog-backend-r0rj.onrender.com/edit`, {id, title, content} )
              
     } catch (error) {
         console.error(error)
