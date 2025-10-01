@@ -48,7 +48,7 @@ const navigate = useNavigate();
             </form>
         </div>
           <div>
-             <p>Don't Have An Account? <Link to="/">SignUp</Link></p>
+             <p>Don't Have An Account? <Link to="/signup">SignUp</Link></p>
              </div>
        </div>
     )    
