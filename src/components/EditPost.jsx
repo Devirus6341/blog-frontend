@@ -34,14 +34,18 @@ function EditPost() {
   }, [id, user?.accessToken]);
 
 
-const handleSubmit = async () => { 
-    try {
-    navigate('/user/posts')
-    await axios.patch(`https://blog-backend-r0rj.onrender.com/edit`, {id, title, content} )
-             
-    } catch (error) {
-        console.error(error)
-    }
+const handleSubmit = async (e) => { 
+    e.preventDefault();
+   
+  try {
+    await axios.patch(
+      `https://blog-backend-r0rj.onrender.com/edit`,
+      { id, title, content }
+    );
+    navigate('/user/posts');
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 return (
