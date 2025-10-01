@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import {UserContext} from '../UserContext'
+import '../styles/editpost.css'
 
 function EditPost() {
   const [user] = useContext(UserContext)

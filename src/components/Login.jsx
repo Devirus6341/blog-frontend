@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { UserContext } from "../UserContext";
+import '../styles/signup.css'
 
 function Login() {
 const [user, setUser] = useContext(UserContext)

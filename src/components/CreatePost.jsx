@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from "react";
 import { useContext } from "react";
 import {UserContext}from '../UserContext'
+import '../styles/createpost.css'
 
 function CreatePost() {
     const [user] = useContext(UserContext);

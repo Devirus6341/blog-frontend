@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { UserContext } from "../UserContext";
+import '../styles/home.css'
 
  function ViewPost() {
 const [post, setPost] = useState ("");
